@@ -58,7 +58,7 @@ var store1 = {
     for (var i = 0; i < this.totalCookies.length; i++){
       var hourEl = document.createElement('li');
       salesList.appendChild(hourEl);
-      hourEl.textContent = this.totalCookies[i] + ' cookies';
+      hourEl.textContent = this.hours[i] + ': ' + this.totalCookies[i] + ' cookies';
     }
 
     var sumEl = document.createElement('li');
@@ -126,7 +126,7 @@ var store2 = {
     for (var i = 0; i < this.totalCookies.length; i++){
       var hourEl = document.createElement('li');
       salesList.appendChild(hourEl);
-      hourEl.textContent = this.totalCookies[i] + ' cookies';
+      hourEl.textContent = this.hours[i] + ': ' + this.totalCookies[i] + ' cookies';
     }
 
     var sumEl = document.createElement('li');
@@ -195,7 +195,7 @@ var store3 = {
     for (var i = 0; i < this.totalCookies.length; i++){
       var hourEl = document.createElement('li');
       salesList.appendChild(hourEl);
-      hourEl.textContent = this.totalCookies[i] + ' cookies';
+      hourEl.textContent = this.hours[i] + ': ' + this.totalCookies[i] + ' cookies';
     }
 
     var sumEl = document.createElement('li');
@@ -241,7 +241,6 @@ var store4 = {
 
       this.totalCookies.push(cookieAndCustomersPerHour[1]);
       this.cookiesSum = (this.cookiesSum + cookieAndCustomersPerHour[1]);
-      console.log('Total ' + this.cookiesSum);
     }
   },
 
@@ -268,7 +267,7 @@ var store4 = {
     for (var i = 0; i < this.totalCookies.length; i++){
       var hourEl = document.createElement('li');
       salesList.appendChild(hourEl);
-      hourEl.textContent = this.totalCookies[i] + ' cookies';
+      hourEl.textContent = this.hours[i] + ': ' + this.totalCookies[i] + ' cookies';
     }
 
     var sumEl = document.createElement('li');
@@ -339,7 +338,7 @@ var store5 = {
     for (var i = 0; i < this.totalCookies.length; i++){
       var hourEl = document.createElement('li');
       salesList.appendChild(hourEl);
-      hourEl.textContent = this.totalCookies[i] + ' cookies';
+      hourEl.textContent = this.hours[i] + ': ' + this.totalCookies[i] + ' cookies';
     }
     console.log(hourEl);
 
