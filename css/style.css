@@ -27,12 +27,20 @@ ul {
     font-size: 20px;
 }
 
+form {
+    padding: 20px;
+    padding-left: 350px;
+
+}
+
 table {
     text-align: center;
-    border: 2px black;
+    border: 10px black;
     display: inline-block;
     color: whitesmoke;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 20px;
+    padding-left: 400px;
 }
 
 td {
@@ -41,7 +49,7 @@ td {
 }
 
 tr {
-    border: 1px gray;
+    border: 1px black;
     
 }
 

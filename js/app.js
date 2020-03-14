@@ -117,3 +117,17 @@ var Lima = new SalmonCookieStore('Lima', 2, 16, 4.6);
 
 totalsPerHour();
 
+// Giving users the ability to input add new locations of stores to the sales table:
+// Needs to take in info from user then add it to the bottom of the table.
+
+// function inputForm (){
+//   // Grab the Id to link to HTML form
+//   var formEl = document.getElementById('custAddStore');
+//   table.innerHTML = null;
+
+//   for ( var i =0; store < allStores.length; i++){
+//     allStores[i].writeTable();
+//   }
+//   writeTable();
+// }
+// inputForm();
