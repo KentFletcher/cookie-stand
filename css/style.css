@@ -1,77 +1,103 @@
 body { 
-    background-color: salmon;
+    background-color: #EDB7AA;
 }
 
 header {
     display: block;
     text-align: center;
     font-size: 50px;
+    padding-bottom: 50px;
 }
 
 img.align-center {
     display: block;
-    margin-left: 400px;    
+    margin-left: 27%;    
 }
 
 #chinook {
-    margin-left: 600px;
+    margin-left: 38%;
+    padding-bottom: 30px;
 }
 
 header img.align-center {
-    margin-left: 650px;
+    margin-left: 40%;
    
 }
 
 ul {
     text-align: center;
     font-size: 20px;
+    color: #307058;
 }
 
 form {
     padding: 20px;
-    padding-left: 350px;
+    /* padding-left: 350px; */
+    margin-left: 20%;
 
 }
 
 table {
     text-align: center;
-    border: 10px black;
+    border: 1px black;
     display: inline-block;
-    color: whitesmoke;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #D2E0DB;
+    font-family: Arial, Helvetica, sans-serif;
     padding: 20px;
-    padding-left: 400px;
+    margin-left: 25%;
 }
 
 td {
     padding: 10px;
-    border: 5px black;
+    border: 1px black;
 }
 
 tr {
-    border: 1px black;
-    
+    border: 1px black; 
 }
 
 h1 {
     text-align: center;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    background-color: salmon;
-    padding: 0px;
+    padding: 30px;
     margin: 0px;
     font-size: 60px;
     color: aquamarine;
     height: 60px;
 }
 
+div div{
+    padding: 30px;
+    margin-left: 10%;
+}
+
 div div img{
-    padding: 20px 60px 20px 60px ;
+    padding: 20px;
 }
 
 #table tr{
     background: gray;
+   
 }
 
 a {
+    padding: 20px;
     font-size: 20px;
+    color: cadetblue;
+}
+
+li img {
+    padding: 20px;
+}
+
+form{
+    color: #307058;
+}
+
+div p {
+    text-align: center;
+    padding: 25px;
+    font-size: 30px;
+    color: aquamarine;
+    font-family: Georgia, 'Times New Roman', Times, serif ;
 }
