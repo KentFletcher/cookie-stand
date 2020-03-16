@@ -124,8 +124,6 @@ function custAddStoreInfo(infoInput) {
   showTable();
 }
 
-
-headerRow();
 new SalmonCookieStore('Seattle', 23, 65, 6.3);
 new SalmonCookieStore('Tokyo', 3, 24, 1.2);
 new SalmonCookieStore('Dubai', 11, 38, 3.7);
@@ -136,7 +134,7 @@ new SalmonCookieStore('Lima', 2, 16, 4.6);
 function showTable (){
   var table = document.getElementById('table');
   table.innerHTML = null;
-
+  headerRow();
   for ( var i =0; i < allStores.length; i++){
     allStores[i].writeTable();
   }

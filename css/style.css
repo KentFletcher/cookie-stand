@@ -20,8 +20,7 @@ img.align-center {
 }
 
 header img.align-center {
-    margin-left: 40%;
-   
+    margin-left: 40%;  
 }
 
 ul {
@@ -32,28 +31,22 @@ ul {
 
 form {
     padding: 20px;
-    /* padding-left: 350px; */
     margin-left: 20%;
-
 }
 
 table {
     text-align: center;
-    border: 1px black;
     display: inline-block;
     color: #D2E0DB;
     font-family: Arial, Helvetica, sans-serif;
     padding: 20px;
     margin-left: 25%;
+    background: gray;
 }
 
 td {
     padding: 10px;
-    border: 1px black;
-}
-
-tr {
-    border: 1px black; 
+    border: black;
 }
 
 h1 {
@@ -75,11 +68,6 @@ div div img{
     padding: 20px;
 }
 
-#table tr{
-    background: gray;
-   
-}
-
 a {
     padding: 20px;
     font-size: 20px;
@@ -92,6 +80,7 @@ li img {
 
 form{
     color: #307058;
+    padding: 10px;
 }
 
 div p {
@@ -100,4 +89,20 @@ div p {
     font-size: 30px;
     color: aquamarine;
     font-family: Georgia, 'Times New Roman', Times, serif ;
+}
+
+button{
+    background-color: aquamarine;
+    width: 50px;
+    height: 30px;
+    margin-left: 35%;
+    margin-top: 10px;
+}
+
+button:hover {
+    cursor: pointer;
+};
+
+#footer {
+    padding: 20px;
 }
