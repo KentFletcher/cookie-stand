@@ -9,11 +9,9 @@ function SalmonCookieStore (name, minCust, maxCust, avgCookie) {
   this.maxCustomer = maxCust;
   this.avgCookieSales = avgCookie;
   this.cookiesStorePerHour = [];
+
   allStores.push(this);
-  // console.log(this.cookiesStorePerHour);
   this.avgSalesPerHour();
-  // console.log(cookiesPerHour);
-  this.writeTable();
 }
 
 
@@ -36,21 +34,20 @@ SalmonCookieStore.prototype.writeTable = function(){
   var tableEl = document.getElementById('table');
   var rowEl = document.createElement('tr');
   var cellEl = document.createElement('td');
-  // console.log(rowEl);
+
   cellEl.textContent = this.name;
   tableEl.appendChild(rowEl);
   rowEl.appendChild(cellEl);
-  // console.log(cellEl);
-  var sumOfCookies = 0;
 
+  var sumOfCookies = 0;
   /**loop to get my totals for each store */
   for(var i = 0; i < this.cookiesStorePerHour.length; i++){
     cellEl = document.createElement('td');
     cellEl.textContent = this.cookiesStorePerHour[i];
     rowEl.appendChild(cellEl);
     sumOfCookies = sumOfCookies + this.cookiesStorePerHour[i];
-    // console.log(sumOfCookies);
   }
+
   cellEl = document.createElement('td');
   cellEl.textContent = sumOfCookies;
   rowEl.appendChild(cellEl);
@@ -87,11 +84,11 @@ function totalsPerHour(){
   rowEl.appendChild(cellEl);
   var dailyAllStores = 0;
 
+  //Loops to pass through my table and total each hour
   for(var i = 0; i < hours.length; i++){
     var hourlyTotals = 0;
-
-
     cellEl = document.createElement('td');
+
     for(var j = 0; j < allStores.length; j++){
       hourlyTotals = hourlyTotals + allStores[j].cookiesStorePerHour[i];
 
@@ -108,12 +105,39 @@ function totalsPerHour(){
   cellEl.textContent = dailyAllStores;
 }
 
-headerRow();
-var Seattle = new SalmonCookieStore('Seattle', 23, 65, 6.3);
-var Tokyo = new SalmonCookieStore('Tokyo', 3, 24, 1.2);
-var Dubai = new SalmonCookieStore('Dubai', 11, 38, 3.7);
-var Paris = new SalmonCookieStore('Paris', 20, 38, 2.3);
-var Lima = new SalmonCookieStore('Lima', 2, 16, 4.6);
+// Giving users the ability to input add new locations of stores to the sales table:
+// Needs to take in info from user then add it to the bottom of the table.
+var formNewStore = document.getElementById('custAddStore');
 
-totalsPerHour();
 
+formNewStore.addEventListener('submit', custAddStoreInfo);
+
+function custAddStoreInfo(infoInput) {
+  infoInput.preventDefault();
+  var name = infoInput.target.storeLocation.value;
+  var minCustomer = Number(infoInput.target.minCust.value);
+  var maxCustomer = Number(infoInput.target.maxCust.value);
+  var avgCookiePerCust = Number(infoInput.target.avgCookiePerCust.value);
+
+  new SalmonCookieStore(name, minCustomer, maxCustomer, avgCookiePerCust);
+  console.log(allStores);
+  showTable();
+}
+
+new SalmonCookieStore('Seattle', 23, 65, 6.3);
+new SalmonCookieStore('Tokyo', 3, 24, 1.2);
+new SalmonCookieStore('Dubai', 11, 38, 3.7);
+new SalmonCookieStore('Paris', 20, 38, 2.3);
+new SalmonCookieStore('Lima', 2, 16, 4.6);
+
+//Renders out the table with any new added stores and also if a user inputs a new store.
+function showTable (){
+  var table = document.getElementById('table');
+  table.innerHTML = null;
+  headerRow();
+  for ( var i =0; i < allStores.length; i++){
+    allStores[i].writeTable();
+  }
+  totalsPerHour();
+}
+showTable();
